@@ -619,6 +619,8 @@ RequiresPermission: android.app.admin.DevicePolicyManager#generateKeyPair(androi
     Method 'generateKeyPair' documentation mentions permissions already declared by @RequiresPermission
 RequiresPermission: android.app.admin.DevicePolicyManager#getApplicationExemptions(String):
     Method 'getApplicationExemptions' documentation mentions permissions already declared by @RequiresPermission
+RequiresPermission: android.app.admin.DevicePolicyManager#getContentProtectionPolicy(android.content.ComponentName):
+    Method 'getContentProtectionPolicy' documentation mentions permissions already declared by @RequiresPermission
 RequiresPermission: android.app.admin.DevicePolicyManager#getCrossProfileWidgetProviders(android.content.ComponentName):
     Method 'getCrossProfileWidgetProviders' documentation mentions permissions already declared by @RequiresPermission
 RequiresPermission: android.app.admin.DevicePolicyManager#getLockTaskFeatures(android.content.ComponentName):
@@ -665,6 +667,8 @@ RequiresPermission: android.app.admin.DevicePolicyManager#setAlwaysOnVpnPackage(
     Method 'setAlwaysOnVpnPackage' documentation mentions permissions without declaring @RequiresPermission
 RequiresPermission: android.app.admin.DevicePolicyManager#setApplicationExemptions(String, java.util.Set<java.lang.Integer>):
     Method 'setApplicationExemptions' documentation mentions permissions already declared by @RequiresPermission
+RequiresPermission: android.app.admin.DevicePolicyManager#setContentProtectionPolicy(android.content.ComponentName, int):
+    Method 'setContentProtectionPolicy' documentation mentions permissions already declared by @RequiresPermission
 RequiresPermission: android.app.admin.DevicePolicyManager#setDeviceProvisioningConfigApplied():
     Method 'setDeviceProvisioningConfigApplied' documentation mentions permissions already declared by @RequiresPermission
 RequiresPermission: android.app.admin.DevicePolicyManager#setLockTaskFeatures(android.content.ComponentName, int):
@@ -1875,8 +1879,14 @@ UnflaggedApi: android.content.Context#REMOTE_AUTH_SERVICE:
     New API must be flagged with @FlaggedApi: field android.content.Context.REMOTE_AUTH_SERVICE
 UnflaggedApi: android.net.NetworkPolicyManager#notifyDenylistChanged(int[], int[]):
     New API must be flagged with @FlaggedApi: method android.net.NetworkPolicyManager.notifyDenylistChanged(int[],int[])
-UnflaggedApi: android.net.NetworkPolicyManager.NetworkPolicyCallback#onUidsAllowedTransportsChanged(int[], long[]):
-    New API must be flagged with @FlaggedApi: method android.net.NetworkPolicyManager.NetworkPolicyCallback.onUidsAllowedTransportsChanged(int[],long[])
+UnflaggedApi: android.net.NetworkPolicyManager#registerAllowedTransportsCallback(java.util.concurrent.Executor, android.net.NetworkPolicyManager.AllowedTransportsCallback):
+    New API must be flagged with @FlaggedApi: method android.net.NetworkPolicyManager.registerAllowedTransportsCallback(java.util.concurrent.Executor,android.net.NetworkPolicyManager.AllowedTransportsCallback)
+UnflaggedApi: android.net.NetworkPolicyManager#unregisterAllowedTransportsCallback(android.net.NetworkPolicyManager.AllowedTransportsCallback):
+    New API must be flagged with @FlaggedApi: method android.net.NetworkPolicyManager.unregisterAllowedTransportsCallback(android.net.NetworkPolicyManager.AllowedTransportsCallback)
+UnflaggedApi: android.net.NetworkPolicyManager.AllowedTransportsCallback:
+    New API must be flagged with @FlaggedApi: class android.net.NetworkPolicyManager.AllowedTransportsCallback
+UnflaggedApi: android.net.NetworkPolicyManager.AllowedTransportsCallback#onUidsAllowedTransportsChanged(int[], long[]):
+    New API must be flagged with @FlaggedApi: method android.net.NetworkPolicyManager.AllowedTransportsCallback.onUidsAllowedTransportsChanged(int[],long[])
 UnflaggedApi: android.os.IpcDataCache#MODULE_TELEPHONY:
     New API must be flagged with @FlaggedApi: field android.os.IpcDataCache.MODULE_TELEPHONY
 UnflaggedApi: android.provider.Settings.Config#getAllStrings():
